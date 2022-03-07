@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace of cup</title>
+    <link rel="stylesheet" type="text/css" href="master.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/undefyned/grxdients@1.0.0/grxdients.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body> 
+  <nav class="primary-gradient z-10" style="top:0; padding:0px 10px; position: fixed;">
+    <div class="nav-wrapper">
+      <a href="#"><span class="flow-text fontfm">Ace of cups</span></a>
+  
+      <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+        <i class="material-icons">menu</i>
+      </a>
+  
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="play.html">Play</a></li>
+        <li><a href="test_case.html">Test Cases</a></li>
+      </ul>
+    </div>
+  </nav>
+  <ul class="sidenav" id="mobile-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="play.html">Play</a></li>
+        <li><a href="test_case.html">Test Cases</a></li>
+  </ul>
+    
+    
+
+<div class="row poker-cards-window">
+  <div class="col s12">
+    <div class="poker-wrapper">
+        <div class="poker-card poker-card-red">♥️</div>
+        <div class="poker-card">♠️️</div>
+        <div class="poker-card">🃏️️</div>
+        <div class="poker-card poker-card-red">♦️</div>
+        <div class="poker-card">♣️️</div>
+    </div>
+  </div>
+  <div class="col s12">
+    <div class="poker-wrapper player-two">
+      <div class="poker-card poker-card-red">♥️</div>
+      <div class="poker-card">♠️️</div>
+      <div class="poker-card">🃏️️</div>
+      <div class="poker-card poker-card-red">♦️</div>
+      <div class="poker-card">♣️️</div>
+    </div>
+  </div>
+</div>
+<div class="row poker-input">
+    <form id="form" action="javascript:play(this);">
+    <div class="row">
+      <div class="col s6">
+          <label for"hand1">Hand 1</label>
+          <input type="text" name="hand1" id="hand1" required>
+      </div>
+      <div class="col s6">
+          <label for"hand2">Hand 2</label>
+          <input type="text" name="hand2" id="hand2" required>
+      </div>
+      <div class="col centered">
+          <button class="grx-blue-indigo waves-effect waves-light btn" type="submit">submit</button>  
+      </div>
+    </div>
+  </form>
+</div>
+<form class="row poker-output" id="reset" action="javascript:reset(this);">
+    <div class="row">
+      <div class="col s6">
+        <h6 id="rank0" style="text-align: center"></h6>
+      </div>
+      <div class="col s6">
+        <h6 id="rank1" style="text-align: center"></h6>
+      </div>
+      <div class="col centered">
+        <h5 id="winner" class="grx-amber-orange-text" style="font-size: 2.5em; font-weight: bold; text-transform: uppercase; text-align: center"></h5>
+      </div>
+      <div class="col centered">
+        <button type="submit" id="reset">Click here to play again!</button>  
+    </div>
+</form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
